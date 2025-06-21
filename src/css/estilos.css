@@ -1,7 +1,7 @@
 body {
 	font-family: "Roboto", sans-serif;
 	background-color: rgb(0, 179, 0);
-	background-image: url(/projeto-magickai/src/imagens/fundo.jpg);
+	background-image: url(/src/imagens/fundo.jpg);
 	background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
