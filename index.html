@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semana do zero ao programador contratado - Magick IA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./src/css/reset.css">
+  <link rel="stylesheet" href="./src/css/estilos.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <img src="./src/imagens/logo.png" alt="Logo MagickIA" />
+  </header>
+
+  <main class="container">
+    <h1 class="produtos">Produtos</h1>
+
+    <div class="filtros">
+      <div class="categorias-cartas">
+        <label for="categoria">Categoria</label>
+        <select id="categoria" class="categoria">
+          <option value="">Todas as categorias</option>
+          <option value="Ouro">Ouro</option>
+          <option value="TOTS">TOTS</option>
+        </select>
+      </div>
+
+      <div class="preco-cartas">
+        <label for="preco">Preço máximo (R$)</label>
+        <input type="number" id="preco" class="preco" placeholder="Ex: 1000" min="0" step="100" />
+      </div>
+
+      <div class="botoes-filtros">
+        <button class="btn-filtrar">Aplicar filtros</button>
+        <button class="btn-limpar">Limpar filtros</button>
+      </div>
+    </div>
+
+    <!-- Mensagem de aviso quando nenhum produto for encontrado -->
+    <p id="mensagem-vazia" class="mensagem-vazia esconder">Nenhuma carta encontrada com os filtros selecionados.</p>
+
+    <ul class="cartas">
+      <li class="carta" data-categoria="Ouro" data-preco="300">
+        <img src="./src/imagens/carta-arkanon.png" alt="Carta Mbappé" />
+        <div class="informacoes">
+          <h2 class="nome-personagem">Mbappé</h2>
+          <span class="categoria">Categoria: Ouro</span>
+          <span class="preco">R$ 300,00</span>
+          <a href="https://wa.me/55519999999?text=Olá, quero comprar a carta do Mbappé!" class="btn-comprar"
+            target="_blank" rel="noopener noreferrer">Comprar</a>
+        </div>
+      </li>
+
+      <li class="carta" data-categoria="TOTS" data-preco="4000">
+        <img src="./src/imagens/carta-lymara.png" alt="Carta Haaland" />
+        <div class="informacoes">
+          <h2 class="nome-personagem">Haaland</h2>
+          <span class="categoria">Categoria: TOTS</span>
+          <span class="preco">R$ 4000,00</span>
+          <a href="https://wa.me/55519999999?text=Olá, quero comprar a carta do Haaland!" class="btn-comprar"
+            target="_blank" rel="noopener noreferrer">Comprar</a>
+        </div>
+      </li>
+
+      <li class="carta" data-categoria="TOTS" data-preco="8000">
+        <img src="./src/imagens/carta-kaelthar.png" alt="Carta Aitana Bonmatí" />
+        <div class="informacoes">
+          <h2 class="nome-personagem">Aitana Bonmatí</h2>
+          <span class="categoria">Categoria: TOTS</span>
+          <span class="preco">R$ 8000,00</span>
+          <a href="https://wa.me/55519999999?text=Olá, quero comprar a carta da Aitana Bonmatí!" class="btn-comprar"
+            target="_blank" rel="noopener noreferrer">Comprar</a>
+        </div>
+      </li>
+
+      <li class="carta" data-categoria="Ouro" data-preco="1500">
+        <img src="./src/imagens/carta-maldrik.png" alt="Carta Jude Bellingham" />
+        <div class="informacoes">
+          <h2 class="nome-personagem">Jude Bellingham</h2>
+          <span class="categoria">Categoria: Ouro</span>
+          <span class="preco">R$ 1500,00</span>
+          <a href="https://wa.me/55519999999?text=Olá, quero comprar a carta do Jude Bellingham!" class="btn-comprar"
+            target="_blank" rel="noopener noreferrer">Comprar</a>
+        </div>
+      </li>
+
+      <li class="carta" data-categoria="Ouro" data-preco="600">
+        <img src="./src/imagens/carta-drahven.png" alt="Carta Rodri" />
+        <div class="informacoes">
+          <h2 class="nome-personagem">Rodri</h2>
+          <span class="categoria">Categoria: Ouro</span>
+          <span class="preco">R$ 600,00</span>
+          <a href="https://wa.me/55519999999?text=Olá, quero comprar a carta do Rodri!" class="btn-comprar"
+            target="_blank" rel="noopener noreferrer">Comprar</a>
+        </div>
+      </li>
+
+      <li class="carta" data-categoria="Ouro" data-preco="400">
+        <img src="./src/imagens/carta-nyxsombra.png" alt="Carta Alexia Putellas" />
+        <div class="informacoes">
+          <h2 class="nome-personagem">Alexia Putellas</h2>
+          <span class="categoria">Categoria: Ouro</span>
+          <span class="preco">R$ 400,00</span>
+          <a href="https://wa.me/55519999999?text=Olá, quero comprar a carta da Alexia Putellas!" class="btn-comprar"
+            target="_blank" rel="noopener noreferrer">Comprar</a>
+        </div>
+      </li>
+    </ul>
+  </main>
+
+  <footer class="rodape">@2025 - Todos os direitos reservados</footer>
+  <script src="./src/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,337 @@
+/* ==========================================================================
+Configurações Globais e Estilo de Fundo
+========================================================================== */
+body {
+font-family: "Roboto", sans-serif;
+min-height: 100vh;
+background-color: #0b1d06;
+background-image: linear-gradient(rgba(10, 25, 6, 0.82), rgba(10, 25, 6, 0.88)),
+url(./src/imagens/fundo.jpg);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+background-attachment: fixed;
+color: #333333;
+}
+
+/* ==========================================================================
+Cabeçalho
+========================================================================== */
+.cabecalho {
+background-color: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(8px);
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 16px 20px;
+margin-bottom: 40px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.cabecalho img {
+max-height: 48px;
+transition: transform 0.3s ease;
+}
+
+.cabecalho img:hover {
+transform: scale(1.03);
+}
+
+/* ==========================================================================
+Container Principal
+========================================================================== */
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.container .produtos {
+color: #ffffff;
+font-size: 28px;
+font-weight: 700;
+margin-bottom: 24px;
+line-height: 36px;
+letter-spacing: 1px;
+text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.container .produtos::before {
+content: "";
+display: inline-block;
+width: 6px;
+height: 28px;
+background-color: #32cd32;
+border-radius: 3px;
+}
+
+/* ==========================================================================
+Seção de Filtros (Glassmorphism)
+========================================================================== */
+.container .filtros {
+background: rgba(18, 48, 10, 0.65);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border: 1px solid rgba(255, 255, 255, 0.15);
+border-radius: 16px;
+padding: 24px;
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+gap: 20px;
+flex-wrap: wrap;
+margin-bottom: 40px;
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.container .categorias-cartas,
+.container .preco-cartas {
+display: flex;
+flex-direction: column;
+flex: 1;
+min-width: 240px;
+gap: 8px;
+}
+
+.container label {
+letter-spacing: 1px;
+font-size: 14px;
+font-weight: 600;
+color: #e0f2fe;
+text-transform: uppercase;
+}
+
+.container .categorias-cartas select,
+.container .preco-cartas input {
+padding: 12px 16px;
+border-radius: 10px;
+border: 1px solid rgba(255, 255, 255, 0.2);
+background-color: rgba(255, 255, 255, 0.95);
+color: #111827;
+font-size: 16px;
+height: 50px;
+transition: all 0.2s ease;
+box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.container select:focus,
+.container input:focus {
+outline: none;
+border-color: #4ade80;
+box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.3);
+background-color: #ffffff;
+}
+
+/* Botões dos Filtros */
+.container .filtros .botoes-filtros {
+display: flex;
+gap: 12px;
+align-self: flex-end;
+flex-wrap: wrap;
+}
+
+.container .filtros .btn-filtrar {
+border: none;
+background-color: #22c55e;
+color: #052e16;
+padding: 0 28px;
+border-radius: 10px;
+font-size: 15px;
+font-weight: 700;
+height: 50px;
+cursor: pointer;
+letter-spacing: 0.5px;
+transition: all 0.2s ease;
+box-shadow: 0 4px 14px rgba(34, 197, 94, 0.4);
+}
+
+.container .filtros .btn-filtrar:hover {
+background-color: #16a34a;
+color: #ffffff;
+transform: translateY(-2px);
+box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
+}
+
+.container .filtros .btn-filtrar:active {
+transform: translateY(0);
+}
+
+.container .filtros .btn-limpar {
+border: 1px solid rgba(255, 255, 255, 0.3);
+background-color: rgba(255, 255, 255, 0.1);
+color: #ffffff;
+padding: 0 20px;
+border-radius: 10px;
+font-size: 15px;
+font-weight: 500;
+height: 50px;
+cursor: pointer;
+letter-spacing: 0.5px;
+transition: all 0.2s ease;
+}
+
+.container .filtros .btn-limpar:hover {
+background-color: rgba(255, 255, 255, 0.25);
+border-color: rgba(255, 255, 255, 0.6);
+transform: translateY(-2px);
+}
+
+/* ==========================================================================
+Grid de Cartas
+========================================================================== */
+.container .cartas {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 32px;
+margin-top: 24px;
+}
+
+.container .cartas .carta {
+background: rgba(255, 255, 255, 0.95);
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+box-shadow 0.3s ease;
+display: flex;
+flex-direction: column;
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.container .cartas .carta:hover {
+transform: translateY(-10px);
+box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4), 0 0 15px rgba(74, 222, 128, 0.2);
+}
+
+.container .carta img {
+width: 100%;
+height: auto;
+padding: 20px 20px 10px 20px;
+object-fit: contain;
+transition: transform 0.3s ease;
+}
+
+.container .carta:hover img {
+transform: scale(1.05);
+}
+
+.container .carta .informacoes {
+display: flex;
+flex-direction: column;
+gap: 8px;
+background-color: #ffffff;
+padding: 20px;
+margin-top: auto;
+border-top: 1px solid #f0f0f0;
+}
+
+.container .carta .informacoes .nome-personagem {
+font-size: 22px;
+font-weight: 800;
+color: #111827;
+letter-spacing: -0.5px;
+}
+
+.container .carta .informacoes .categoria {
+color: #6b7280;
+font-size: 14px;
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+
+.container .carta .informacoes .preco {
+font-size: 24px;
+font-weight: 800;
+color: #15803d;
+margin: 4px 0 8px 0;
+}
+
+.container .carta .informacoes .btn-comprar {
+color: #ffffff;
+background-color: #166534;
+padding: 14px;
+border-radius: 10px;
+font-weight: 700;
+letter-spacing: 1px;
+text-transform: uppercase;
+font-size: 14px;
+transition: all 0.2s ease;
+text-align: center;
+text-decoration: none;
+box-shadow: 0 4px 10px rgba(22, 101, 52, 0.3);
+}
+
+.container .carta .informacoes .btn-comprar:hover {
+background-color: #15803d;
+box-shadow: 0 6px 15px rgba(21, 128, 61, 0.4);
+}
+
+/* ==========================================================================
+Mensagem de Resultado Vazio & Rodapé
+========================================================================== */
+.mensagem-vazia {
+background: rgba(18, 48, 10, 0.6);
+backdrop-filter: blur(8px);
+border: 1px dashed rgba(255, 255, 255, 0.3);
+border-radius: 12px;
+color: #ffffff;
+font-size: 18px;
+text-align: center;
+padding: 40px 20px;
+margin: 40px 0;
+font-weight: 500;
+}
+
+.rodape {
+background-color: rgba(10, 25, 6, 0.95);
+backdrop-filter: blur(8px);
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+display: flex;
+justify-content: center;
+color: #9ca3af;
+font-size: 14px;
+padding: 24px;
+margin-top: 80px;
+}
+
+/* Classes Auxiliares de Exibição */
+.esconder {
+display: none !important;
+}
+
+/* ==========================================================================
+Ajustes Responsivos (Mobile)
+========================================================================== */
+@media (max-width: 768px) {
+.cabecalho {
+margin-bottom: 30px;
+}
+
+.container .filtros {
+flex-direction: column;
+align-items: stretch;
+}
+
+.container .categorias-cartas,
+.container .preco-cartas {
+width: 100%;
+}
+
+.container .filtros .botoes-filtros {
+width: 100%;
+}
+
+.container .filtros .btn-filtrar,
+.container .filtros .btn-limpar {
+flex: 1;
+}
+
+.container .cartas {
+grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+gap: 20px;
+}
+}
